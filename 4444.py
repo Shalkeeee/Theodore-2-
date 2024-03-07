@@ -5,8 +5,8 @@ with open('scientist.txt', encoding='utf-8') as file:
     reader = list(csv.DictReader(file, delimiter='#'))
     symparol = '0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM'
     for row in reader:
-        Sk = row['ScientistName'].split()
-        row['login'] = f'{Sk[0]}_{Sk[1][0]}{Sk[2][0]}'
+        N = row['ScientistName'].split()
+        row['login'] = f'{N[0]}_{N[1][0]}{N[2][0]}'
         parol = ''
         for i in range(10):
             parol += random.choice(symparol)
